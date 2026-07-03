@@ -1,0 +1,192 @@
+.page {
+  min-height: 100dvh;
+  background: rgba(255, 146, 146, 0.68);
+  display: flex;
+  justify-content: center;
+}
+
+.page__inner {
+  position: relative;
+  width: min(100%, 402px);
+  min-height: 1348px;
+  padding: 50px 26px 60px;
+  overflow: hidden;
+}
+
+/* ── Logo ── */
+
+.logo {
+  position: relative;
+  height: 147px;
+  margin-bottom: 75px;
+}
+
+.logo__the {
+  position: absolute;
+  top: 55px;
+  left: 1px;
+  width: 98px;
+  height: auto;
+}
+
+.logo__art {
+  position: absolute;
+  top: 0;
+  left: 105px;
+  width: 91px;
+  height: auto;
+}
+
+.logo__club--1 {
+  position: absolute;
+  top: 14px;
+  right: 60px;
+  width: 42px;
+  height: auto;
+}
+
+.logo__club--2 {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  width: 77px;
+  height: auto;
+}
+
+/* ── Hero ── */
+
+.hero {
+  position: relative;
+  margin-bottom: 144px;
+}
+
+.hero__scribbles {
+  position: absolute;
+  top: -10px;
+  left: -8px;
+  width: calc(100% + 16px);
+  height: auto;
+  pointer-events: none;
+}
+
+.hero__title {
+  position: relative;
+  z-index: 1;
+  font-family: 'UnifrakturMaguntia', 'Fette Fraktur LT Std', serif;
+  font-size: clamp(2.5rem, 10vw, 4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  text-align: center;
+  color: #fff;
+  max-width: 331px;
+  margin: 0 auto;
+}
+
+/* ── Event ── */
+
+.event {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.event__label {
+  font-family: 'Bebas Neue', 'Gill Sans Display MT Pro', sans-serif;
+  font-size: clamp(2.5rem, 12vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 24px;
+  white-space: nowrap;
+}
+
+.event__content {
+  position: relative;
+  min-height: 271px;
+}
+
+.event__scribbles {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 294px;
+  height: auto;
+  pointer-events: none;
+}
+
+.event__title {
+  position: relative;
+  z-index: 1;
+  font-family: 'UnifrakturMaguntia', 'Fette Fraktur LT Std', serif;
+  font-size: clamp(2.5rem, 10vw, 4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  text-align: center;
+  color: #fff;
+  max-width: 331px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+/* ── CTA ── */
+
+.cta {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.cta__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 227px;
+  height: 98px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cta__button:hover {
+  transform: scale(1.03);
+}
+
+.cta__button:active {
+  transform: scale(0.98);
+}
+
+.cta__border {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cta__text {
+  position: relative;
+  z-index: 1;
+  font-family: 'UnifrakturMaguntia', 'Fette Fraktur LT Std', serif;
+  font-size: clamp(2rem, 8vw, 3rem);
+  color: #fff;
+  text-transform: lowercase;
+}
+
+/* ── Desktop ── */
+
+@media (min-width: 768px) {
+  .page__inner {
+    width: min(100%, 480px);
+    padding: 60px 40px 80px;
+  }
+
+  .hero__title,
+  .event__title {
+    font-size: 4rem;
+  }
+
+  .event__label {
+    font-size: 4rem;
+  }
+}
